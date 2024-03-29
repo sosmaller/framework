@@ -55,7 +55,7 @@ class Application
             if ($command == 'schedule') {
                 $class = '\\App\\Console\\Kernel';
             } elseif ($command == 'queue') {
-                $class = '\\Sosmaller\\Components\\Queue';
+                $class = '\\SoSmaller\\Components\\Queue';
             } else {
                 $class = '\\App\\Console\\Commands\\' . ucwords($command);
             }
