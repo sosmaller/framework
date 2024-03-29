@@ -1,0 +1,25 @@
+{
+  "name": "sosmall/framework",
+  "description": "sosmall framework",
+  "homepage": "https://github.com/sosmaller/framework",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "yangchengsheng",
+      "email": "369363564@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sosmall\\": "src"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "minimum-stability": "beta"
+}
