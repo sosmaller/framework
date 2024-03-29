@@ -1,6 +1,6 @@
 <?php
 
-namespace Sosmall;
+namespace SoSmaller;
 
 use Exception;
 
@@ -55,7 +55,7 @@ class Application
             if ($command == 'schedule') {
                 $class = '\\App\\Console\\Kernel';
             } elseif ($command == 'queue') {
-                $class = '\\Sosmall\\Components\\Queue';
+                $class = '\\Sosmaller\\Components\\Queue';
             } else {
                 $class = '\\App\\Console\\Commands\\' . ucwords($command);
             }

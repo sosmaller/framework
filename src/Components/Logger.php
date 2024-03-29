@@ -1,6 +1,6 @@
 <?php
 
-namespace Sosmall\Components;
+namespace SoSmaller\Components;
 
 /**
  * 请前往 https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md

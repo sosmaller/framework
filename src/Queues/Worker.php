@@ -1,6 +1,6 @@
 <?php
 
-namespace Sosmall\Queues;
+namespace SoSmaller\Queues;
 
 use Exception;
 

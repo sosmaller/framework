@@ -1,6 +1,6 @@
 <?php
 
-namespace Sosmall\Components;
+namespace SoSmaller\Components;
 
 
 class Request

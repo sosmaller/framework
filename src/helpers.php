@@ -54,7 +54,7 @@ function env($key, $defalut = '')
  */
 function app($key)
 {
-    $class = 'Sosmall\\Components\\' . ucwords($key);
+    $class = 'SoSmaller\\Components\\' . ucwords($key);
     return new $class;
 }
 

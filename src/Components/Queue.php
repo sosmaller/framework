@@ -1,6 +1,6 @@
 <?php
 
-namespace Sosmall\Components;
+namespace SoSmaller\Components;
 
 
 use Exception;
@@ -25,9 +25,9 @@ class Queue
     {
         try {
             if (env('QUEUE_DRIVER') == 'sync') {
-                return \Sosmall\Queues\Worker::work(['class' => $class_name, 'params' => $queue_params]);
+                return \SoSmaller\Queues\Worker::work(['class' => $class_name, 'params' => $queue_params]);
             } else {
-                $queue_id = \Sosmall\Queues\Job::push($class_name, $queue_name, $queue_params, $retry_count);
+                $queue_id = \SoSmaller\Queues\Job::push($class_name, $queue_name, $queue_params, $retry_count);
                 return $queue_id;
             }
         } catch (Exception $e) {
@@ -69,6 +69,6 @@ class Queue
             throw new  Exception("params can't be empty");
             return false;
         }
-        return \Sosmall\Queues\Worker::run($params);
+        return \SoSmaller\Queues\Worker::run($params);
     }
 }

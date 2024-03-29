@@ -1,6 +1,6 @@
 <?php
 
-namespace Sosmall;
+namespace SoSmaller;
 
 /**
  * Class Crontab

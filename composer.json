@@ -1,6 +1,6 @@
 {
-  "name": "sosmall/framework",
-  "description": "sosmall framework",
+  "name": "sosmaller/framework",
+  "description": "sosmaller framework",
   "homepage": "https://github.com/sosmaller/framework",
   "type": "library",
   "license": "MIT",
@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Sosmall\\": "src"
+      "SoSmaller\\": "src"
     },
     "files": [
       "src/helpers.php"
