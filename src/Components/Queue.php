@@ -2,7 +2,7 @@
 
 namespace SoSmaller\Components;
 
-
+use SoSmaller\Traits\Singleton;
 use Exception;
 
 /**
@@ -12,8 +12,10 @@ use Exception;
  */
 class Queue
 {
+    use Singleton;
+
     /**
-     * @used app('queue')->onQueue(\app\jobs\TestJob::class,['name'=>'yangchengsheng']);
+     * @used \SoSmaller\Components\Queue::instance()->onQueue(\app\jobs\TestJob::class,['name'=>'yangchengsheng']);
      * @param string $queue_name
      * @param $class_name
      * @param $queue_params

@@ -2,10 +2,13 @@
 
 namespace SoSmaller\Components;
 
+use SoSmaller\Traits\Singleton;
 use  Exception;
 
 class Config
 {
+    use Singleton;
+
     private static $config;
 
     /**

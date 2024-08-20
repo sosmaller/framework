@@ -64,7 +64,7 @@ function app($key)
  */
 function config($key)
 {
-    return app('config')->getConfig($key);
+    return \SoSmaller\Components\Config::instance()->getConfig($key);
 }
 
 /**

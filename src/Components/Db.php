@@ -2,15 +2,19 @@
 
 namespace SoSmaller\Components;
 
+use SoSmaller\Traits\Singleton;
 use PDOException;
 use Exception;
 use PDO;
+
 
 /**
  * DB
  */
 class Db
 {
+    use Singleton;
+
     const DB_READ = 'read';
     const DB_WRITE = 'write';
 

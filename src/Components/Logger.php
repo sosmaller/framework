@@ -2,12 +2,16 @@
 
 namespace SoSmaller\Components;
 
+use SoSmaller\Traits\Singleton;
+
 /**
  * 请前往 https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md
  * 查看完整的接口规范.
  */
 class Logger
 {
+    use Singleton;
+
     const EMERGENCY = 'emergency';
     const ALERT = 'alert';
     const CRITICAL = 'critical';

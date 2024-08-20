@@ -2,9 +2,11 @@
 
 namespace SoSmaller\Components;
 
+use SoSmaller\Traits\Singleton;
 
 class Request
 {
+    use Singleton;
 
     private static $parameters = [];
 

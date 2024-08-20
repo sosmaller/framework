@@ -2,7 +2,8 @@
 
 namespace SoSmaller\Queues;
 
-use  Exception;
+use Exception;
+use SoSmaller\Components\Redis;
 
 class Job
 {
@@ -52,7 +53,7 @@ class Job
             'attempts' => $retry_count,
             'id' => md5(uniqid('', true))
         ];
-        return app('redis')->connection('queue')->rpush(self::$queuePrefix . $queue_name, json_encode($params));
+        return Redis::instance()->connection('queue')->rpush(self::$queuePrefix . $queue_name, json_encode($params));
     }
 
     /**
@@ -62,7 +63,7 @@ class Job
      */
     public static function pop($queue_name = 'default')
     {
-        return app('redis')->connection('queue')->lpop(self::$queuePrefix . $queue_name);
+        return Redis::instance()->connection('queue')->lpop(self::$queuePrefix . $queue_name);
     }
 
     /**
@@ -74,9 +75,9 @@ class Job
     public static function status($queue_name = 'default', $status = '')
     {
         if (strlen($status)) {
-            return app('redis')->connection('queue')->set(self::$queuePrefix . "status_" . $queue_name, $status, 86400);
+            return Redis::instance()->connection('queue')->set(self::$queuePrefix . "status_" . $queue_name, $status, 86400);
         } else {
-            return app('redis')->connection('queue')->get(self::$queuePrefix . "status_" . $queue_name);
+            return Redis::instance()->connection('queue')->get(self::$queuePrefix . "status_" . $queue_name);
         }
     }
 

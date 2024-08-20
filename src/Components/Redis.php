@@ -2,11 +2,14 @@
 
 namespace SoSmaller\Components;
 
+use SoSmaller\Traits\Singleton;
 use Exception;
 use RedisException;
 
 class Redis
 {
+    use Singleton;
+
     private $_obj;
     private $_name = 'default';
     private static $_singleton = []; // 单例

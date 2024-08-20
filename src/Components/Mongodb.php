@@ -2,6 +2,7 @@
 
 namespace SoSmaller\Components;
 
+use SoSmaller\Traits\Singleton;
 use Exception;
 use MongoDB\BSON\ObjectId;
 use MongoDB\Driver\BulkWrite;
@@ -12,6 +13,8 @@ use MongoDB\Driver\Query;
 
 class Mongodb
 {
+
+    use Singleton;
 
     private $_mongo; //对象
     private $_name = 'default'; // 数据库对象名称
